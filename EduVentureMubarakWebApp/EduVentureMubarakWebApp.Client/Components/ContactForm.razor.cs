@@ -19,20 +19,13 @@ public partial class ContactForm : ComponentBase
     {
         using (HttpClient http = new())
         {       
-            // // Formspree endpoint URL
-            // string formspreeUrl = "https://formspree.io/YOUR_FORM_ID"; // Replace with your Formspree URL
-            // var response = await http.PostAsJsonAsync(formspreeUrl, _model);
-            // if (response.IsSuccessStatusCode) 
-            // { 
-            //     _formSubmitted = true; 
-            // }
-            // else 
-            // { 
-            //     // Optionally handle error
-            // }
-            _formSubmitted = true;
-            // Add logic here to handle form submission, e.g., send the data to an API or email service
-            await Task.Delay(1000); // Simulate an async API call
+            // Formspree endpoint URL
+            string formspreeUrl = "https://formspree.io/f/mdkoazor"; // Replace with your Formspree URL
+            var response = await http.PostAsJsonAsync(formspreeUrl, _model);
+            if (response.IsSuccessStatusCode) 
+            { 
+                _formSubmitted = true; 
+            }
             StateHasChanged();
         }
     }
@@ -40,11 +33,11 @@ public partial class ContactForm : ComponentBase
     public class Contact
     {
         [Required]
-        [StringLength(8, ErrorMessage = "First Name length can't be more than 8.")]
+        [StringLength(16, ErrorMessage = "First Name length can't be more than 16.")]
         public string? FirstName { get; set; }
 
         [Required]
-        [StringLength(8, ErrorMessage = "Last Name length can't be more than 8.")]
+        [StringLength(16, ErrorMessage = "Last Name length can't be more than 16.")]
         public string? LastName { get; set; }
 
         [Required]
