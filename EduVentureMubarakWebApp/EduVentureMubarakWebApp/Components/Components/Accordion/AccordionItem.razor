@@ -1,0 +1,14 @@
+@namespace EduVentureMubarakWebApp.Components.Components.Accordion
+
+<div class="accordion-item">
+    <h2 class="accordion-header">
+        <button class="accordion-button @(!IsCollapsed ? "" : "collapsed") fw-bolder" type="button" data-bs-toggle="collapse" data-bs-target="#@(_id)" aria-expanded="@(!IsCollapsed)" aria-controls="@(_id)">
+            @Title
+        </button>
+    </h2>
+    <div id="@(_id)" class="accordion-collapse collapse @(IsCollapsed ? "" : "show")" data-bs-parent="@_parent">
+        <div class="accordion-body">
+            @ChildContent
+        </div>
+    </div>
+</div>

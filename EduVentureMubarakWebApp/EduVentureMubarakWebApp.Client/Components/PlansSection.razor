@@ -1,0 +1,85 @@
+@rendermode InteractiveAuto
+
+<section class="p-5 bg-light">
+    <h3 class="display-6 fw-bold text-primary text-center mb-5">Plans for you or your team</h3>
+    <div class="text-center">
+        <div class="btn-group bg-white rounded-pill" role="group" aria-label="Basic mixed styles example">
+            <button type="button" class="shadow-none fw-bold btn py-3 px-5 rounded-pill @(!_isTeamsPlan ? "btn-primary" : "")" @onclick="() => SetPlan(false)">For Individuals</button>
+            <button type="button" class="shadow-none fw-bold btn py-3 px-5 rounded-pill @(_isTeamsPlan ? "btn-primary" : "")" @onclick="() => SetPlan(true)">For Teams</button>
+        </div>
+    </div>
+        <div class="container text-center my-4">
+            @if (_isTeamsPlan)
+            {
+                <div class="row justify-content-center gap-5">
+                    <div class="col-10 col-sm-8 col-md-5 col-lg-3  border border-primary border-2 bg-white p-2" style="border-top-width: 26px !important;">
+                        <h5 class="fw-bold my-4">EduVenture Mubarak Plus For Teams</h5>
+                        <p class="text-center">
+                            For 5 to 115 Users
+                        </p>
+                        <p class="fw-bold"><span class="fs-4">$3</span>/month per user</p>
+                        <button class="btn btn-primary fw-bold py-3 px-5">Start 7-days free trial</button>
+                        <div class="vstack gap-2 align-items-center p-2 mt-4">
+                            <p>14-day money-back guarantee</p>
+                            <div class="border border-1 border-dark w-100"></div>
+                            <p>Full access for all team members to learning resources, courses, and certifications</p>
+                            <div class="border border-1 border-dark w-100"></div>
+                            <p>Custom team dashboards to track progress</p>
+                            <div class="border border-1 border-dark w-100"></div>
+                            <p>Team leader tools to assign courses and monitor performance</p>
+                            <div class="border border-1 border-dark w-100"></div>
+                            <p>Scalable to add or remove users easily</p>
+                            <div class="border border-1 border-dark w-100"></div>
+                            <p>Ideal for businesses, schools, and learning groups</p>
+                        </div>
+                    </div>
+                </div>
+            }
+            else
+            {
+            <div class="row justify-content-center gap-5">
+                <div class="col-10 col-sm-8 col-md-5 col-lg-3 border border-primary border-2 bg-white p-2" style="border-top-width: 26px !important;">
+                    <h5 class="fw-bold my-4">EduVenture Mubarak Plus Annual</h5>
+                    <p class="text-center">
+                        Combine flexibility and savings with long-term learning goals
+                    </p>
+                    <p class="fw-bold">Just <span class="fs-4">$4</span>/month<br/>Billed annually at <span class="fs-4">$48</span></p>
+                    <button class="btn btn-primary fw-bold py-3 px-5">Start 7-days free trial</button>
+                    <div class="vstack gap-4 align-items-center p-4">
+                        <p>14-day money-back guarantee</p>
+                        <div class="border border-1 border-dark w-100"></div>
+                        <p>Save 20% by choosing the annual plan</p>
+                        <div class="border border-1 border-dark w-100"></div>
+                        <p>Same benefits as the monthly plan, but with a discounted rate for the year</p>
+                    </div>
+                </div>
+                <div class="col-10 col-sm-8 col-md-5 col-lg-3 border border-primary border-2 bg-white p-2" style="border-top-width: 26px !important;">
+                    <h5 class="fw-bold my-4">EduVenture Mubarak Plus Monthly</h5>
+                    <p class="text-center">
+                        Complete multiple courses and earn credentials in the short term
+                    </p>
+                    <p class="fw-bold"><span class="fs-4">$15</span>/month<br/></p>
+                    <button class="btn btn-primary fw-bold py-3 px-5">Start 7-days free trial</button>
+                    <div class="vstack gap-4 align-items-center p-4">
+                        <p>Cancel anytime</p>
+                        <div class="border border-1 border-dark w-100"></div>
+                        <p>Access to all courses, certifications, and exclusive learning content</p>
+                        <div class="border border-1 border-dark w-100"></div>
+                        <p>Earn unlimited certificates</p>
+                    </div>
+                </div>
+            </div> 
+            }
+        </div>
+</section>
+
+@code
+{
+    private bool _isTeamsPlan;
+
+    private void SetPlan(bool plan)
+    {
+        _isTeamsPlan = plan;
+        StateHasChanged();
+    }
+}

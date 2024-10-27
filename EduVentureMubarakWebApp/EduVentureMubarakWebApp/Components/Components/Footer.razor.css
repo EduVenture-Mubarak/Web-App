@@ -1,0 +1,15 @@
+.footer {
+    background-color: #ECF0EB;
+}
+
+.footer a {
+    text-decoration: none;
+}
+.site-map a {
+    color: #333;
+}
+
+.social-link{
+    width: 32px;
+    height: 32px;
+}

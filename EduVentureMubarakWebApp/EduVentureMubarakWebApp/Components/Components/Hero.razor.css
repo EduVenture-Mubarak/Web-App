@@ -1,0 +1,8 @@
+.hero-section {
+    color: white;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - 150px); /* Adjust based on header and footer height */
+}

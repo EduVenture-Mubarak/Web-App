@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduVentureMubarakWebApp", "EduVentureMubarakWebApp\EduVentureMubarakWebApp\EduVentureMubarakWebApp.csproj", "{4461566B-0CA0-453F-93D9-9D62BF4C9245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EduVentureMubarakWebApp.Client", "EduVentureMubarakWebApp\EduVentureMubarakWebApp.Client\EduVentureMubarakWebApp.Client.csproj", "{D3404C50-928D-46FA-A099-217DAF2770E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4461566B-0CA0-453F-93D9-9D62BF4C9245}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4461566B-0CA0-453F-93D9-9D62BF4C9245}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4461566B-0CA0-453F-93D9-9D62BF4C9245}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4461566B-0CA0-453F-93D9-9D62BF4C9245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3404C50-928D-46FA-A099-217DAF2770E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3404C50-928D-46FA-A099-217DAF2770E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3404C50-928D-46FA-A099-217DAF2770E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3404C50-928D-46FA-A099-217DAF2770E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
