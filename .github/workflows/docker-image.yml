@@ -34,7 +34,7 @@ jobs:
         run: |
           mkdir -p ~/.ssh
           ssh-keyscan -H -p ${{ secrets.SERVER_PORT }} ${{ secrets.PROD_SERVER_IP }} >> ~/.ssh/known_hosts
-
+ 
       - name: Ensure target directory exists
         run: ssh -i private_key.pem -p ${{ secrets.SERVER_PORT }} ${{ secrets.SERVER_USER }}@${{ secrets.PROD_SERVER_IP }} "mkdir -p ~/webapp-docker-images && chmod -R 755 ~/webapp-docker-images"
 
